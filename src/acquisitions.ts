@@ -28,4 +28,8 @@ export const ACQUISITIONS: Acquisition[] = [
   { title: "Great Books of the Western World", author: "Robert Maynard Hutchins, ed.", note: "complete Britannica set" },
   { title: "On the Genealogy of Morality", author: "Friedrich Nietzsche" },
   { title: "Charisma and Disenchantment: The Vocation Lectures", author: "Max Weber", note: "Searls translation, NYRB" },
+  { title: "The Prince", author: "Niccolò Machiavelli" },
+  { title: "Leviathan", author: "Thomas Hobbes", note: "Hackett" },
+  { title: "The Social Contract", author: "Jean-Jacques Rousseau", note: "Hackett" },
+  { title: "Nicomachean Ethics", author: "Aristotle", note: "Library of Liberal Arts" },
 ];
