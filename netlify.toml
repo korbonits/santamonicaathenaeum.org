@@ -1,0 +1,10 @@
+[build]
+  command = "pnpm build"
+  publish = "dist"
+
+# Redirect placeholder — e.g. force apex over www once DNS is set up:
+# [[redirects]]
+#   from = "https://www.santamonicaathenaeum.org/*"
+#   to = "https://santamonicaathenaeum.org/:splat"
+#   status = 301
+#   force = true

@@ -1,0 +1,125 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Join" description="Pledge a membership to the Santa Monica Athenaeum.">
+  <h1>Pledge a membership</h1>
+  <p>
+    We are collecting pledges, not payments, until our 501(c)(3) status is
+    granted. When it is, we will write to you with instructions — and you
+    may change your mind at any point before then.
+  </p>
+
+  <form
+    name="pledge"
+    method="POST"
+    action="/thanks/"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+  >
+    <input type="hidden" name="form-name" value="pledge" />
+    <p class="hidden">
+      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+    </p>
+
+    <p>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required autocomplete="name" />
+    </p>
+
+    <p>
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        autocomplete="email"
+      />
+    </p>
+
+    <p>
+      <label for="tier">Tier</label>
+      <select id="tier" name="tier" required>
+        <option value="Member — $300/yr">Member — $300 per year</option>
+        <option value="Founder — $500/yr" selected
+          >Founder — $500 per year</option
+        >
+        <option value="Life — $5,000">Life — $5,000</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="stock"
+        >What would you want us to stock? <span class="optional"
+          >(optional)</span
+        ></label
+      >
+      <textarea id="stock" name="stock" rows="4"></textarea>
+    </p>
+
+    <p>
+      <label for="proposed-by"
+        >Proposed by <span class="optional">(optional — member name)</span
+        ></label
+      >
+      <input type="text" id="proposed-by" name="proposed-by" />
+    </p>
+
+    <p>
+      <button type="submit">Pledge</button>
+    </p>
+  </form>
+</Base>
+
+<style>
+  h1 {
+    text-align: left;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  form {
+    margin-top: 2rem;
+  }
+
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .optional {
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+    font: inherit;
+    color: inherit;
+    background: #fffefb;
+    border: 1px solid #c9c2b6;
+    padding: 0.4rem 0.6rem;
+  }
+
+  form p {
+    margin-bottom: 1.25rem;
+  }
+
+  button {
+    font: inherit;
+    font-variant-caps: small-caps;
+    letter-spacing: 0.06em;
+    background: #1c1a17;
+    color: #faf8f4;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+  }
+</style>

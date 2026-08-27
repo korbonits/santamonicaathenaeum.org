@@ -1,0 +1,147 @@
+---
+import "@fontsource/eb-garamond/400.css";
+import "@fontsource/eb-garamond/400-italic.css";
+import "@fontsource/eb-garamond/600.css";
+import { CONTACT_EMAIL } from "../founding";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const fullTitle = title
+  ? `${title} · The Santa Monica Athenaeum`
+  : "The Santa Monica Athenaeum";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta
+      name="description"
+      content={description ??
+        "A membership library for mathematics and philosophy in Santa Monica, California."}
+    />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/collection/">Collection</a>
+        <a href="/join/">Join</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>
+        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+      </p>
+      <p>Santa Monica, California · founded 2026</p>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: "EB Garamond", Garamond, Georgia, serif;
+    font-size: 20px;
+    background: #faf8f4;
+    color: #1c1a17;
+  }
+
+  body {
+    max-width: 65ch;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+    line-height: 1.6;
+  }
+
+  header nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    font-variant-caps: small-caps;
+    letter-spacing: 0.06em;
+    margin-bottom: 4rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  p,
+  ul,
+  ol,
+  dl {
+    margin-bottom: 1rem;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.35rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #c9c2b6;
+    margin: 3rem auto;
+    width: 8ch;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  footer {
+    margin-top: 5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #c9c2b6;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  footer p {
+    margin-bottom: 0.25rem;
+  }
+</style>

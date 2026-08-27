@@ -1,0 +1,111 @@
+---
+import Base from "../layouts/Base.astro";
+import { FOUNDER_COUNT, THRESHOLDS } from "../founding";
+
+const next =
+  THRESHOLDS.find((t) => FOUNDER_COUNT < t.count) ??
+  THRESHOLDS[THRESHOLDS.length - 1];
+---
+
+<Base>
+  <h1>The Santa Monica Athenaeum</h1>
+  <p class="subtitle">
+    A membership library for mathematics and philosophy in Santa Monica,
+    California.
+  </p>
+
+  <hr />
+
+  <section>
+    <h2>Why</h2>
+    <!--
+      TODO: founder's letter goes here. Outline:
+        1. The problem with LA's libraries — what the public system does
+           well, and the kind of room it no longer provides.
+        2. What this room is for — sustained reading, open shelves,
+           conversation among members.
+        3. Why now.
+      Replace this comment and the paragraph below with the letter.
+    -->
+    <p><em>[Founder's letter — to be written.]</em></p>
+  </section>
+
+  <section>
+    <h2>The collection</h2>
+    <p>
+      Mathematics and philosophy, with an emphasis on primary texts: the
+      works themselves, in good editions, rather than commentary alone.
+      The shelves are open — members browse freely — and the collection
+      lends. Nothing is behind glass.
+    </p>
+    <p>
+      <!-- TODO: replace with the TinyCat catalog link or embed once live. -->
+      The catalog will be browsable online at <a href="/collection/"
+        >/collection</a
+      >.
+    </p>
+  </section>
+
+  <section>
+    <h2>Membership</h2>
+    <dl>
+      <div>
+        <dt>Member</dt>
+        <dd>$300 per year. Borrowing privileges and use of the reading room.</dd>
+      </div>
+      <div>
+        <dt>Founder</dt>
+        <dd>
+          $500 per year. Everything above, and your name on the founding
+          plate.
+        </dd>
+      </div>
+      <div>
+        <dt>Life</dt>
+        <dd>$5,000, once. A member for good.</dd>
+      </div>
+    </dl>
+    <p>
+      Until our 501(c)(3) status is granted we are collecting
+      <em>pledges</em>, not payments. No money changes hands until the
+      Athenaeum can receive it properly.
+    </p>
+    <p><a href="/join/">Pledge a membership →</a></p>
+  </section>
+
+  <section>
+    <h2>Founding</h2>
+    <p class="counter">
+      {FOUNDER_COUNT} of {next.count} founders
+    </p>
+    <ul>
+      {
+        THRESHOLDS.map((t) => (
+          <li>
+            <strong>{t.count} founders</strong> {t.unlocks}.
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Base>
+
+<style>
+  .subtitle {
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  dl div {
+    margin-bottom: 1rem;
+  }
+
+  dt {
+    font-weight: 600;
+  }
+
+  .counter {
+    font-size: 1.3rem;
+  }
+</style>
