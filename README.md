@@ -23,6 +23,12 @@ in the same file.
 and the bracketed placeholder paragraph with the letter. Plain `<p>`
 paragraphs; the layout handles the rest.
 
+## Recent acquisitions
+
+Add entries to `ACQUISITIONS` in `src/acquisitions.ts` (newest first;
+title, author, optional note). The section on `/collection` renders only
+when the list is non-empty. Keep the last ~10 and delete older ones.
+
 ## TinyCat catalog
 
 Two placeholders, both marked with TODO comments:

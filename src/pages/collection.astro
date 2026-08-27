@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import { ACQUISITIONS } from "../acquisitions";
 ---
 
 <Base
@@ -17,10 +18,39 @@ import Base from "../layouts/Base.astro";
       - or embed:  TinyCat's iframe snippet from Admin → Widgets.
   -->
   <p><em>The online catalog is being prepared. Check back soon.</em></p>
+
+  {
+    ACQUISITIONS.length > 0 && (
+      <section>
+        <h2>Recent acquisitions</h2>
+        <ul class="acquisitions">
+          {ACQUISITIONS.map((a) => (
+            <li>
+              <em>{a.title}</em>, {a.author}
+              {a.note && <span class="note"> — {a.note}</span>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
 </Base>
 
 <style>
   h1 {
     text-align: left;
+  }
+
+  .acquisitions {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .acquisitions li {
+    margin-bottom: 0.5rem;
+  }
+
+  .note {
+    font-size: 0.9rem;
   }
 </style>
