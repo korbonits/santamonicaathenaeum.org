@@ -1,0 +1,13 @@
+# The Santa Monica Athenaeum
+
+> A membership library for mathematics and philosophy being founded in Santa Monica, California. Primary texts, open shelves, lending. Collecting founding pledges (not payments) until 501(c)(3) status is granted.
+
+## Pages
+
+- [Prospectus](https://santamonicaathenaeum.org/): what the library is, membership tiers (Member $300/yr, Founder $500/yr, Life $5,000), founding thresholds
+- [Join](https://santamonicaathenaeum.org/join/): pledge a membership
+- [Collection](https://santamonicaathenaeum.org/collection/): the catalog
+
+## Contact
+
+- hello@santamonicaathenaeum.org

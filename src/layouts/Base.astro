@@ -7,12 +7,32 @@ import { CONTACT_EMAIL } from "../founding";
 interface Props {
   title?: string;
   description?: string;
+  noindex?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, noindex = false } = Astro.props;
 const fullTitle = title
   ? `${title} · The Santa Monica Athenaeum`
   : "The Santa Monica Athenaeum";
+const metaDescription =
+  description ??
+  "A membership library for mathematics and philosophy in Santa Monica, California.";
+const canonical = new URL(Astro.url.pathname, Astro.site);
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Library",
+  name: "The Santa Monica Athenaeum",
+  url: "https://santamonicaathenaeum.org/",
+  email: CONTACT_EMAIL,
+  foundingDate: "2026",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Santa Monica",
+    addressRegion: "CA",
+    addressCountry: "US",
+  },
+});
 ---
 
 <!doctype html>
@@ -21,12 +41,17 @@ const fullTitle = title
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
-    <meta
-      name="description"
-      content={description ??
-        "A membership library for mathematics and philosophy in Santa Monica, California."}
-    />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <meta name="description" content={metaDescription} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:site_name" content="The Santa Monica Athenaeum" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json" set:html={jsonLd} />
   </head>
   <body>
     <header>
@@ -143,5 +168,27 @@ const fullTitle = title
 
   footer p {
     margin-bottom: 0.25rem;
+  }
+
+  @media print {
+    html {
+      background: #fff;
+      color: #000;
+      font-size: 12pt;
+    }
+
+    header nav {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    main a[href^="http"]::after,
+    main a[href^="/"]::after {
+      content: " (santamonicaathenaeum.org)";
+      font-size: 0.8em;
+    }
   }
 </style>
