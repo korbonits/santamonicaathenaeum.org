@@ -26,7 +26,6 @@ export const ACQUISITIONS: Acquisition[] = [
   { title: "Gödel, Escher, Bach: An Eternal Golden Braid", author: "Douglas Hofstadter" },
   { title: "The Harvard Classics", author: "Charles W. Eliot, ed.", note: "complete set" },
   { title: "Great Books of the Western World", author: "Robert Maynard Hutchins, ed.", note: "complete Britannica set" },
-  { title: "Artificial Intelligence: A Guide for Thinking Humans", author: "Melanie Mitchell" },
   { title: "On the Genealogy of Morality", author: "Friedrich Nietzsche" },
   { title: "Charisma and Disenchantment: The Vocation Lectures", author: "Max Weber", note: "Searls translation, NYRB" },
 ];
