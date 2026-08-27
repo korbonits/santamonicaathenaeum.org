@@ -9,5 +9,15 @@ export interface Acquisition {
 }
 
 export const ACQUISITIONS: Acquisition[] = [
-  // { title: "Elements", author: "Euclid", note: "Heath translation, Dover, 3 vols." },
+  { title: "Phenomenology of Spirit", author: "G. W. F. Hegel", note: "Miller translation" },
+  { title: "Critique of Pure Reason", author: "Immanuel Kant", note: "Guyer & Wood translation, Cambridge" },
+  { title: "Nietzsche: Philosopher, Psychologist, Antichrist", author: "Walter Kaufmann" },
+  { title: "Being and Nothingness", author: "Jean-Paul Sartre" },
+  { title: "Being and Time", author: "Martin Heidegger" },
+  { title: "Ulysses", author: "James Joyce" },
+  { title: "Finnegans Wake", author: "James Joyce" },
+  { title: "War and Peace", author: "Leo Tolstoy" },
+  { title: "Anna Karenina", author: "Leo Tolstoy" },
+  { title: "On What Matters", author: "Derek Parfit", note: "vols. 1–2" },
+  { title: "Bubbles", author: "Peter Sloterdijk", note: "Spheres, vol. 1" },
 ];
