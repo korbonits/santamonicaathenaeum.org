@@ -1,6 +1,11 @@
 ---
 import Base from "../layouts/Base.astro";
-import { ACQUISITIONS } from "../acquisitions";
+import { ACQUISITIONS, TOPICS } from "../acquisitions";
+
+const grouped = TOPICS.map((topic) => ({
+  topic,
+  books: ACQUISITIONS.filter((a) => a.topic === topic),
+})).filter((g) => g.books.length > 0);
 ---
 
 <Base
@@ -20,17 +25,22 @@ import { ACQUISITIONS } from "../acquisitions";
   <p><em>The online catalog is being prepared. Check back soon.</em></p>
 
   {
-    ACQUISITIONS.length > 0 && (
+    grouped.length > 0 && (
       <section>
         <h2>From the shelves</h2>
-        <ul class="acquisitions">
-          {ACQUISITIONS.map((a) => (
-            <li>
-              <em>{a.title}</em>, {a.author}
-              {a.note && <span class="note"> — {a.note}</span>}
-            </li>
-          ))}
-        </ul>
+        {grouped.map((g) => (
+          <>
+            <h3>{g.topic}</h3>
+            <ul class="acquisitions">
+              {g.books.map((a) => (
+                <li>
+                  <em>{a.title}</em>, {a.author}
+                  {a.note && <span class="note"> — {a.note}</span>}
+                </li>
+              ))}
+            </ul>
+          </>
+        ))}
       </section>
     )
   }
