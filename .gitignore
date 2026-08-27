@@ -5,3 +5,6 @@ dist/
 .DS_Store
 npm-debug.log*
 pnpm-debug.log*
+
+# private working notes
+FORMATION.md
