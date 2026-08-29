@@ -58,6 +58,18 @@ const jsonLd = JSON.stringify({
   </head>
   <body>
     <header>
+      <a class="mark" href="/" aria-label="The Santa Monica Athenaeum — home">
+        <svg viewBox="0 0 200 160" fill="none" aria-hidden="true">
+          <g stroke="currentColor" stroke-width="13" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M22,84 L54,22 L100,62 L146,22 L178,84"></path>
+            <circle cx="63" cy="98" r="24"></circle>
+            <circle cx="137" cy="98" r="24"></circle>
+            <circle cx="63" cy="98" r="9" fill="currentColor" stroke="none"></circle>
+            <circle cx="137" cy="98" r="9" fill="currentColor" stroke="none"></circle>
+            <path d="M90,120 L110,120 L100,142 Z" fill="currentColor" stroke="none"></path>
+          </g>
+        </svg>
+      </a>
       <nav>
         <a href="/">Home</a>
         <a href="/collection/">Collection</a>
@@ -95,6 +107,18 @@ const jsonLd = JSON.stringify({
     margin: 0 auto;
     padding: 2.5rem 1.25rem 4rem;
     line-height: 1.6;
+  }
+
+  header .mark {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 1.25rem;
+  }
+
+  header .mark svg {
+    display: block;
+    height: 44px;
+    width: 55px;
   }
 
   header nav {
