@@ -19,10 +19,22 @@ export interface Acquisition {
 
 export const ACQUISITIONS: Acquisition[] = [
   // Mathematics
+  { topic: "Mathematics", title: "Tensor Analysis on Manifolds", author: "Richard L. Bishop & Samuel I. Goldberg", note: "Dover" },
+  { topic: "Mathematics", title: "Differential Forms", author: "Henri Cartan", note: "Dover" },
+  { topic: "Mathematics", title: "Abstract Algebra", author: "David S. Dummit & Richard M. Foote", note: "3rd ed., Wiley" },
+  { topic: "Mathematics", title: "Deep Learning", author: "Ian Goodfellow, Yoshua Bengio & Aaron Courville", note: "MIT Press" },
   { topic: "Mathematics", title: "Gödel, Escher, Bach: An Eternal Golden Braid", author: "Douglas Hofstadter" },
-  { topic: "Mathematics", title: "Ricci Flow and the Poincaré Conjecture", author: "John Morgan & Gang Tian", note: "Clay Mathematics Monographs" },
+  { topic: "Mathematics", title: "Introduction to Differentiable Manifolds", author: "Serge Lang", note: "2nd ed., Springer Universitext" },
+  { topic: "Mathematics", title: "Ricci Flow and the Poincaré Conjecture", author: "John Morgan & Gang Tian", note: "Clay Mathematics Monographs, vol. 3" },
   { topic: "Mathematics", title: "Differential Harnack Inequalities and the Ricci Flow", author: "Reto Müller" },
   { topic: "Mathematics", title: "Gödel's Proof", author: "Ernest Nagel & James R. Newman" },
+  { topic: "Mathematics", title: "Foundations of Probability", author: "Alfréd Rényi", note: "Dover" },
+  { topic: "Mathematics", title: "Real and Complex Analysis", author: "Walter Rudin", note: "3rd ed., McGraw-Hill" },
+  { topic: "Mathematics", title: "Calculus on Manifolds", author: "Michael Spivak", note: "Benjamin" },
+  { topic: "Mathematics", title: "Real Analysis", author: "Elias M. Stein & Rami Shakarchi", note: "Princeton Lectures in Analysis III" },
+  { topic: "Mathematics", title: "What's Next? The Mathematical Legacy of William P. Thurston", author: "Dylan P. Thurston, ed.", note: "Annals of Mathematics Studies 205" },
+  { topic: "Mathematics", title: "Foundations of Differentiable Manifolds and Lie Groups", author: "Frank W. Warner", note: "Springer GTM 94" },
+  { topic: "Mathematics", title: "Essential Results of Functional Analysis", author: "Robert J. Zimmer", note: "Chicago Lectures in Mathematics" },
 
   // Philosophy
   { topic: "Philosophy", title: "Nicomachean Ethics", author: "Aristotle", note: "Library of Liberal Arts" },
