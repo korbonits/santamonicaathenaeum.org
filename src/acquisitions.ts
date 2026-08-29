@@ -61,6 +61,7 @@ export const ACQUISITIONS: Acquisition[] = [
   { topic: "Philosophy", title: "Fear and Trembling / Repetition", author: "Søren Kierkegaard", note: "Princeton" },
   { topic: "Philosophy", title: "Philosophical Fragments", author: "Søren Kierkegaard", note: "Princeton" },
   { topic: "Philosophy", title: "Two Treatises of Government", author: "John Locke", note: "Cambridge" },
+  { topic: "Philosophy", title: "The Prince", author: "Niccolò Machiavelli" },
   { topic: "Philosophy", title: "The Prince and The Discourses", author: "Niccolò Machiavelli", note: "Modern Library" },
   { topic: "Philosophy", title: "Selected Writings", author: "Karl Marx", note: "Hackett" },
   { topic: "Philosophy", title: "On Liberty and Other Essays", author: "John Stuart Mill", note: "Oxford" },
