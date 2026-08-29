@@ -111,14 +111,10 @@ export const ACQUISITIONS: Acquisition[] = [
   // Literature
   { topic: "Literature", title: "Love in Another Language", author: "Dick Davis", note: "Carcanet" },
   { topic: "Literature", title: "The Western Wind", author: "Samantha Harvey" },
-  { topic: "Literature", title: "Death Comes to Pemberley", author: "P. D. James", note: "Knopf" },
   { topic: "Literature", title: "The Love Songs of W.E.B. Du Bois", author: "Honorée Fanonne Jeffers" },
   { topic: "Literature", title: "Finnegans Wake", author: "James Joyce" },
   { topic: "Literature", title: "Ulysses", author: "James Joyce" },
-  { topic: "Literature", title: "Missoula", author: "Jon Krakauer", note: "Anchor" },
   { topic: "Literature", title: "Empire of the Stars", author: "Arthur I. Miller", note: "Houghton Mifflin" },
-  { topic: "Literature", title: "The One Plus One", author: "Jojo Moyes" },
-  { topic: "Literature", title: "This Time Tomorrow", author: "Emma Straub", note: "Riverhead" },
   { topic: "Literature", title: "Anna Karenina", author: "Leo Tolstoy" },
   { topic: "Literature", title: "War and Peace", author: "Leo Tolstoy" },
 
